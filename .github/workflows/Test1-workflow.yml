@@ -1,0 +1,16 @@
+name: Test workflow one
+on: pull
+jobs:
+  test-job-1:
+    name: Unit Testing
+    runs-on: ubuntu:latest
+    
+    steps:
+    - name: Welcome Message
+      run: echo "My test GitHub Actions Job"
+
+    - name: print the current working Directory
+      run: ls
+
+    - name: Read file
+      run: cat README.md
