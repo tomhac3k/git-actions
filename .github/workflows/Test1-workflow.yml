@@ -23,3 +23,10 @@ jobs:
         sudo apt-get install cowsay -y
         cowsay -f dragon "Run for Cover, I Am a Dragon" > Dragon.txt
         cat Dragon.txt
+
+    - name: Executing a script
+      run: |
+        chmod -x cowsay.sh
+
+    - name: Cat hr bunny.txt
+      run: cat bunny.txt
