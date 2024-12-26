@@ -21,5 +21,5 @@ jobs:
     - name: Cowsay Welcome Message in one step
       run: |
         sudo apt-get install cowsay -y
-        cowsay -f gragon "Run for Cover, I Am a Dragon" > Dragon.txt
+        cowsay -f dragon "Run for Cover, I Am a Dragon" > Dragon.txt
         cat Dragon.txt
