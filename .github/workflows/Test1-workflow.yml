@@ -29,5 +29,5 @@ jobs:
         chmod -x cowsay.sh
         ./cowsay.sh
 
-    - name: Cat hr bunny.txt
+    - name: Cat bunny.txt
       run: cat bunny.txt
