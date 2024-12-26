@@ -17,3 +17,9 @@ jobs:
 
     - name: Read file
       run: cat README.md
+
+    - name: Cowsay Welcome Message in one step
+      run: |
+        apt install cowsay -y
+        cowsay -f gragon "Run for Cover, I Am a Dragon" > Dragon.txt
+        cat Dragon.txt
