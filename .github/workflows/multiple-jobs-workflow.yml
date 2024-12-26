@@ -24,7 +24,7 @@ jobs:
       run: cat Dragon.txt
 
   deploy-job-3:
-    runs-on:
+    runs-on: ubuntu-latest
     steps:
     - name: Read the Dragon file.
       run: Cat Dragon.txt
