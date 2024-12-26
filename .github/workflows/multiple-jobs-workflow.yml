@@ -40,9 +40,6 @@ jobs:
     needs: [build-job-1,test-job-2]
     runs-on: ubuntu-latest
     steps:
-    - name: Read the Dragon file.
-      run: Cat Dragon.txt
-
     - name: Download the artifact
       uses: actions/download-artifact@v4
       with:
