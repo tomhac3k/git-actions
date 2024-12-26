@@ -1,2 +1,2 @@
-#!/bin/bash
-cowsay -f bunny "Cute Bunny" > bunny.txt
+#!bin/sh
+cowsay -f bunny "Hello I'm blue berry" >> bunny.txt
