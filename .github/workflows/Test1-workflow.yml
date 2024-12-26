@@ -26,7 +26,7 @@ jobs:
 
     - name: Executing a script
       run: |
-        chmod +x cowsay.sh
+        chmod +x ./cowsay.sh
 
     - name: Execute cowsay script
       run: ./cowsay.sh
