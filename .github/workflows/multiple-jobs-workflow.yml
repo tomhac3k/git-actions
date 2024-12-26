@@ -28,9 +28,6 @@ jobs:
     - name: sleep for 10 sec
       run: sleep 10
 
-    - name: Test if the file exists
-      run: cat Dragon.txt
-
     - name: Download the artifact
       uses: actions/download-artifact@v4
       with:
@@ -45,7 +42,7 @@ jobs:
     steps:
     - name: Read the Dragon file.
       run: Cat Dragon.txt
-      
+
     - name: Download the artifact
       uses: actions/download-artifact@v4
       with:
