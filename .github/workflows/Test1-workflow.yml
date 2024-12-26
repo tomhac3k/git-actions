@@ -27,6 +27,7 @@ jobs:
     - name: Executing a script
       run: |
         chmod -x cowsay.sh
+        ./cowsay.sh
 
     - name: Cat hr bunny.txt
       run: cat bunny.txt
