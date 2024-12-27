@@ -11,13 +11,13 @@ jobs:
     - name: Download cowsay application
       run: sudo apt-get install cowsay -y
 
-    
+
     - name: Create a cowsay file with text
-      run: cowsay -f tux "You will face many defeats in life, but never let yourself be defeated." > buffalosay.txt
+      run: cowsay -f tux "You will face many defeats in life, but never let yourself be defeated." > tuxsay.txt
 
     - name:  Execute a file to create a quote with elephant
       run: chmod +x ./elephantsay.sh
-        
+
     - name: Now execute a file
       run: ./elephantsay.sh
 
@@ -25,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: $artifact-name
-        path: ./*
+        path: ./*.txt
 
   test:
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
         name: $artifact-name
 
     - name: Cat the downloaded artifacts
-      run: cat ./*
+      run: cat ./*.txt
 
 
     - name: Add buffalosay to $artifact-name
@@ -50,7 +50,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: $artifact-name
-        path: ./$artifact-name
+        path: ./$artifact-name.txt
 
 
 
