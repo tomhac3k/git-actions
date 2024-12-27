@@ -8,8 +8,10 @@ jobs:
     steps:
     - name: Download cowsay application
       run: sudo apt-get install cowsay -y
+
+    
     - name: Create a cowsay file with text
-      run: cowsay -f buffalo "You will face many defeats in life, but never let yourself be defeated." > buffalosay.txt
+      run: cowsay -f tux "You will face many defeats in life, but never let yourself be defeated." > buffalosay.txt
 
     - name:  Execute a file to create a quote with elephant
       run: |
