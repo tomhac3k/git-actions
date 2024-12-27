@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Download cowsay application
       run: sudo apt-get install cowsay -y
 
@@ -45,6 +45,13 @@ jobs:
 
     - name: add the elephantsay to $artifact-name
       run: cat elephantsay.txt >> $artifact-name.txt
+
+    - name: upload the artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: $artifact-name
+        path: ./$artifact-name
+
 
 
 
