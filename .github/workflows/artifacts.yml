@@ -1,0 +1,47 @@
+name: Artifacts workflows
+on: push
+env:
+    artifact-name: animal-say
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download cowsay application
+      run: sudo apt-get install cowsay -y
+    - name: Create a cowsay file with text
+      run: cowsay -f buffalo "You will face many defeats in life, but never let yourself be defeated." > buffalosay.txt
+
+    - name:  Execute a file to create a quote with elephant
+      run: |
+        chmod +x ./elephantsay.sh
+        ./elephantsay.sh
+
+    - name: upload the files
+      uses: actions/upload-artifact@v4
+      with:
+        name: $artifact-name
+        path: ./*
+
+  test:
+    runs-on: ubuntu
+    steps:
+    - name: Download the artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: $artifact-name
+
+    - name: Cat the downloaded artifacts
+      run: cat ./*
+
+
+    - name: Add buffalosay to $artifact-name
+      run: cat buffalosay.txt > $artifact-name.txt
+
+    - name: add the elephantsay to $artifact-name
+      run: cat elephantsay.txt >> $artifact-name.txt
+
+
+
+
+      
+
