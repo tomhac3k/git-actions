@@ -40,8 +40,8 @@ jobs:
       run: cat ./*.txt
 
 
-    - name: Add buffalosay to $artifact-name
-      run: cat buffalosay.txt > $artifact-name.txt
+    - name: Add tuxsay to $artifact-name
+      run: cat tuxsay.txt > $artifact-name.txt
 
     - name: add the elephantsay to $artifact-name
       run: cat elephantsay.txt >> $artifact-name.txt
