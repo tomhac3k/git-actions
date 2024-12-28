@@ -12,9 +12,11 @@ jobs:
     concurrency:
         group: productions-deploy
         cancel-in-progress: true
+    timeout-minutes: 1
     steps:
     - name: Checkout the repo
       uses: actions/checkout@v4
+
 
     - name: install cowsay
       run: sudo apt-get install cowsay -y
@@ -23,7 +25,6 @@ jobs:
       run: |
         cowsay -f elephant "Hello World from elephant"
         sleep 600s
-      with:
-        timeout-minutes: 2
+
 
  
