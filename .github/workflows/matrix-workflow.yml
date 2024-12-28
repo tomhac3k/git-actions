@@ -1,4 +1,7 @@
 name: Matrix on workflow
+on:
+  - push
+  - dispatch_workflow
 
 jobs:
   cross-platform:
