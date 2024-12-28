@@ -12,6 +12,11 @@ jobs:
         exclude:
         - images: busybox
           os: windows-latest
+        - images: alpine
+          os: windows-latest
+        include:
+        - images: nginx
+          os: ubuntu-20.04
     runs-on: ${{ matrix.os }}
     steps:
 
