@@ -1,12 +1,15 @@
 name: Triggered workflow
-on:
-    workflow_dispatch:
+on: push
+#    workflow_dispatch:
 #    schedule:
 #        - cron: "*/2 * * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    concurrency:
+        group: productions-deploy
+        cancel-in-progress: true
     steps:
     - name: Checkout the repo
       uses: actions/checkout@v4
