@@ -15,5 +15,5 @@ jobs:
         run: docker --version > docker-version.txt
       - name: cat the docker-version.txt
         run: cat docker-version.txt
-      - name: run docker image in the list ${{ matrix.image }} on ${{ matrix.os }}
-        run: docker run ${{ matrix.image }}
+      - name: run docker image in the list ${{ matrix.images }} on ${{ matrix.os }}
+        run: docker run ${{ matrix.images }}
