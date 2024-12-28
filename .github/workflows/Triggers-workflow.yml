@@ -1,0 +1,17 @@
+name: Triggered workflow
+on:
+    schedule:
+        - cron: "*/2 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repo
+      uses: actions/checkout@v4
+
+    - name: install cowsay
+      run: sudo apt-get install cowsay -y
+
+    - name: Echo cowsay elephant every 1 minute
+      run: cowsay -f elephant "Hello World from elephant" 
