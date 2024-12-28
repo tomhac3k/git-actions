@@ -10,7 +10,7 @@ jobs:
         os: [ubuntu-latest,windows-latest]
         images: [busybox,alpine]
         exclude:
-        - images: [busybox,alpine]
+        - images: busybox
           os: windows-latest
     runs-on: ${{ matrix.os }}
     steps:
