@@ -8,14 +8,17 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest,windows-latest]
-        images: [nginx,alpine,busybox]
+        images: [busybox]
     runs-on: ${{ matrix.os }}
     steps:
       - name: install podman
         run: sudo apt install podman -y
+
       - name: Fetch the podman version
         run: podman --version > podman-version.txt
+
       - name: cat the podman-version.txt
         run: cat podman-version.txt
+
       - name: run podman image in the list ${{ matrix.images }} on ${{ matrix.os }}
         run: podman run ${{ matrix.images }}
