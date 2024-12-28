@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: install podman
-        run: sudo apt install podman -y
+        run: sudo apt-get install podman -y
 
       - name: Fetch the podman version
         run: podman --version > podman-version.txt
