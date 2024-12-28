@@ -1,6 +1,8 @@
 name: Triggered workflow
-on: push
-#    workflow_dispatch:
+on: 
+    - push
+    - workflow_dispatch
+    
 #    schedule:
 #        - cron: "*/2 * * * *"
 
