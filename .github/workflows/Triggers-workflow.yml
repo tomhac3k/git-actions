@@ -2,7 +2,7 @@ name: Triggered workflow
 on: 
     - push
     - workflow_dispatch
-    
+
 #    schedule:
 #        - cron: "*/2 * * * *"
 
@@ -22,5 +22,8 @@ jobs:
     - name: Echo cowsay elephant every 1 minute
       run: |
         cowsay -f elephant "Hello World from elephant"
-        sleep 60s
+        sleep 600s
+      with:
+        timeout-minutes: 2
 
+ 
