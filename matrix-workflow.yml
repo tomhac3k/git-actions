@@ -1,0 +1,16 @@
+name: Matrix on workflow
+
+jobs:
+  cross-platform:
+  strategy:
+    matrix:
+      os: [ubuntu-latest,windows-latest]
+      images: [nginx,alpine,busybox]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Fetch the docker version
+        run: docker --version > docker-version.txt
+      - name: cat the docker-version.txt
+        run: cat docker-version.txt
+      - name: run docker image in the list ${{ matrix.image }} on ${{ matrix.os }}
+        run: docker run ${{ matrix.image }}
