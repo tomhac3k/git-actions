@@ -11,8 +11,6 @@ jobs:
         images: [busybox]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: install docker
-        run: sudo apt-get install docker -y
 
       - name: Fetch the docker version
         run: docker --version > docker-version.txt
