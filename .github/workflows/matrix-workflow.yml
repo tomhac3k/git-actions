@@ -11,9 +11,11 @@ jobs:
         images: [nginx,alpine,busybox]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Fetch the docker version
-        run: docker --version > docker-version.txt
-      - name: cat the docker-version.txt
-        run: cat docker-version.txt
-      - name: run docker image in the list ${{ matrix.images }} on ${{ matrix.os }}
-        run: docker run ${{ matrix.images }}
+      - name: install podman
+        run: sudo apt install podman -y
+      - name: Fetch the podman version
+        run: podman --version > podman-version.txt
+      - name: cat the podman-version.txt
+        run: cat podman-version.txt
+      - name: run podman image in the list ${{ matrix.images }} on ${{ matrix.os }}
+        run: podman run ${{ matrix.images }}
