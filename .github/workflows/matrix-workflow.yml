@@ -1,4 +1,4 @@
-name: Matrix on workflow
+name: Matrix on workflow Testing
 on:
   push:
   workflow_dispatch:
