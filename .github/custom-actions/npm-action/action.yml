@@ -1,0 +1,9 @@
+name: 'Read a file'
+description: 'Custom action to cat a file'
+runs:
+  using: "composite"
+  steps:
+      - name: echo Hello World
+        run: echo "Hello World" > index.html
+      - name: cat the Hello World File
+        run: cat index.html

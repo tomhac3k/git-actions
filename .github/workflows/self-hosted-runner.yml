@@ -1,0 +1,15 @@
+name: Runs on self-hosted runner
+on:
+  - push
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Create a file
+        run: mkdir helloworld
+
+      - name: add some text into a file
+        run: echo 'Hello World' > helloworld/hellofile.txt
+
+      - name: Cat the file created
+        run: cat helloworld/hellofile.txt
