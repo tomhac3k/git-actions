@@ -13,3 +13,6 @@ jobs:
 
       - name: Cat the file created
         run: cat helloworld/hellofile.txt
+
+      - name: Remove dir helloworld
+        run: rm -rf helloworld
