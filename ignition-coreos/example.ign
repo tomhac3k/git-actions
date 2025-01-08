@@ -56,7 +56,7 @@
   "systemd": {
     "units": [
       {
-        "contents": "[Unit]\nDescription=xnginx\nAfter=network.online.target\nWants=network.online.target\n\n[Service]\nTimeoutStartSec=0\nExecStartPre=-/bin/podman kill xnginx\nExecStartPre=-/bin/podman rm xnginx\nExecStartPre=/bin/podman pull docker.io/library/nginx:latest\nExecStart=/bin/podman run -d --name xnginx -p 8081:8080 docker.io/library/nginx:latest\n\n[Install]\nWantedBy=multi-user.target\n",
+        "contents": "[Unit]\nDescription=xnginx\nAfter=network.online.target\nWants=network.online.target\n\n[Service]\nTimeoutStartSec=0\nExecStartPre=-/bin/podman kill xnginx\nExecStartPre=-/bin/podman rm xnginx\nExecStart=/bin/podman run -d --name xnginx -p 8081:8080 docker.io/library/nginx:latest\n\n[Install]\nWantedBy=multi-user.target\n",
         "enabled": true,
         "name": "container-nginx.service"
       },
