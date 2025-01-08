@@ -42,6 +42,7 @@
         "mode": 493
       },
       {
+        "overwrite": true,
         "path": "/etc/motd",
         "contents": {
           "compression": "",
