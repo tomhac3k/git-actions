@@ -40,6 +40,14 @@
           "source": "data:;base64,IyEvYmluL2Jhc2gKZWNobyAiRGV0ZWN0ZWQgUHVibGljIElQdjQ6IGlzICQoY3VybCBodHRwczovL2lwdjQuaWNhbmhhemlwLmNvbSkiID4gXAogICAgL2V0Yy9pc3N1ZS5kLzUwX3B1YmxpYy1pcHY0Lmlzc3VlCg=="
         },
         "mode": 493
+      },
+      {
+        "path": "/etc/motd",
+        "contents": {
+          "compression": "",
+          "source": "data:,Hello%20World!%20Welcome%20to%20CoreOS!%0A"
+        },
+        "mode": 420
       }
     ]
   },
