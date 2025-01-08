@@ -1,5 +1,10 @@
 {
   "ignition": {
+    "config": {
+      "replace": {
+        "source": "https://raw.githubusercontent.com/tomhac3k/git-actions/refs/heads/main/ignition-coreos/example.ign"
+      }
+    },
     "version": "3.4.0"
   },
   "passwd": {
